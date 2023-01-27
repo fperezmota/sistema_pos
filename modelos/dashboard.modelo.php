@@ -21,7 +21,7 @@ class DashboardModelo
 
     static public function mdlProductosMasVendidos()
     {
-        $stmt = Conexion::conectar()->prepare('call prc_ListarProductosMasVendidos()');
+        $stmt = Conexion::conectar()->prepare('call prc_ListarProductosMasVendidos');
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
